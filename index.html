@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/8703a91058.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav class="nav_pc">
+        <ul>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(1)" title="ABOUT ME">ABOUT ME</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(2)" title="CAREER">CAREER</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(3)" title="SKILL">SKILL</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(4)" title="PROJECT">PROJECT</a>
+          </li>
+        </ul>
+      </nav>
+
+      
+
+      <script>
+
+          function navOffsetSection(index) {
+              var offset = $("#section" + index).offset();
+              $("html, body").animate({scrollTop : offset.top}, 1000);
+          }
+
+          function topScrollBtn() {
+            var top = $('.top').offset();
+            $("html, body").animate({scrollTop : 0}, 700);
+          }
+
+          
+          $(window).on("scroll", function(){
+              if( $(window).scrollTop() > $(".intro").height() ) {
+                  $("header").css("background", "rgba(0,0,0,.3)");
+              } else {
+                  $("header").css("background", "rgba(0,0,0,.0)");
+              }
+          });
+
+      </script>
+    
+      <div class="btn_mo_wrap">
+        <a href="#" class="btn_mo">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+      </div>
+
+      <nav class="nav_mo">
+        <ul>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(1)" title="ABOUT ME">ABOUT ME</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(2)" title="CAREER">CAREER</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(3)" title="SKILL">SKILL</a>
+          </li>
+          <li>
+            <a href="javascript:;" onclick="navOffsetSection(4)" title="PROJECT">PROJECT</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <script>
+      $(function() {
+        var mo_menu = $('.btn_mo');
+
+        mo_menu.each(function() {
+          var $this = $(this);
+          
+
+          $this.on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            
+            if($(this).hasClass('active')) {
+                $('.nav_mo').fadeIn().animate({'left': 0}); 
+            } else {
+                $('.nav_mo').fadeOut(); 
+            }
+           
+          });
+        });
+      });
+    </script>
+
+    <section class="intro">
+      <div class="section_wrap">
+        <p>부제</p>
+        <h1>YOONSUNMI<br>PORTFOLIO</h1>
+      </div>
+    </section>
+
+    <section id="section1" class="about_me">
+      <h1>ABOUT ME</h1>
+      <div class="section_wrap">
+        <div class="box">
+          <img src="images/about_img.jpg" alt="">
+        </div>
+
+        <div class="box">
+          <p class="name">윤선미</p>
+          <p class="job">Web Publisher & Front-End Developer</p>
+          <ul>
+            <li>AGE</li>
+            <li>ADDRESS</li>
+            <li>E-MAIL</li>
+            <li>INTRODUCE</li>
+          </ul>
+          <ul>
+            <li>28</li>
+            <li>서울시 중랑구</li>
+            <li>yoonsm45@naver.com</li>
+            <li></li>
+          </ul>
+          <p class="introduce">안녕하세요 :)<br />현재는 웹 퍼블리셔의 직업을 가지고 있고 앞으로 더 나아가 프론트엔드 개발자로 성장해 나가고 있는 윤선미입니다.<br />목표를 가지고 부단히 성장해 나가는 모습 보여드리겠습니다.<br />감사합니다!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section2" class="career">
+      <h1>CAREER</h1>
+      <div class="section_wrap">
+        <ul class="c_list">
+            <li>
+                <span class="date">2020.08 ~ 2021.01</span>
+                <strong>메가존</strong>
+                <sub>디지털서비스그룹 사원(프리랜서)</sub>
+                <span class="text">롯데마트 파견 웹퍼블리셔</span>
+            </li>
+            <li>
+                <span class="date">2019.09 ~ 2019.12</span>
+                <strong>티웨이브</strong>
+                <sub>웹개발팀 사원</sub>
+                <span class="text">웹퍼블리셔</span>
+            </li>
+            <li>
+                <span class="date">2018.02 ~ 2019.04</span>
+                <strong>대티즌</strong>
+                <sub>온라인사업실 사원</sub>
+                <span class="text">웹퍼블리셔</span>
+            </li>
+            <li>
+                <span class="date">2016.02 ~ 2017.03</span>
+                <strong>퍼스트마인드</strong>
+                <sub>디지털마케팅팀 사원</sub>
+                <span class="text">바이럴마케팅</span>
+            </li>
+            <li>
+                <span class="date">2013.03 ~ 2016.02</span>
+                <strong>한양여자대학교 정보경영과 졸업</strong>
+                <sub></sub>
+                <span class="text">[졸업작품] HEY! Dr. : 근거리 병원 예약 서비스 사이트 구축</span>
+            </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="section3" class="skill">
+      <h1>SKILL</h1>
+      <div class="section_wrap">
+        <div>
+          <h2>Language</h2>
+          <div class="skill_list">
+            <img src="images/html5.png" alt="">
+            <p>HTML5</p>
+            <p>웹 표준과 웹 접근성에 맞게 의미에 맞는 태그를 사용하여 짜임새 있는 구조 설계와 마크업이 가능합니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/css3.png" alt="">
+            <p>CSS3</p>
+            <p>pc, 반응형으로 구현이 가능하며 다양한 동적 효과를 줄 수 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/js.png" alt="">
+            <p>Java Script</p>
+            <p>기본적인 개념을 인지하고 기본적으로 잘 사용하는 기능을 순수 자바스크립트 언어로 구현하고 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/jquery.png" alt="">
+            <p>JQuery</p>
+            <p>동적인 기능을 구현할 줄 알고 활용을 해볼 줄 알며, 다양한 플러그인 또한 활용 가능합니다.</p>
+          </div>
+        </div>
+        <div>
+          <h2>Tools</h2>
+          <div class="skill_list">
+            <img src="images/vscode.png" alt="">
+            <p>VS Code</p>
+            <p>Edit Plus를 사용하다 최근 부터 VS Code를 사용하고 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/photo.png" alt="">
+            <p>Photoshop</p>
+            <p>기본적인 툴 사용이 가능하며 퍼블리싱에 도움이 될 정도의 편집이 가능합니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/Bitbucket.png" alt="">
+            <p>BitBucket</p>
+            <p>협업 및 버전관리 툴로 소스트리와 연동해서 사용한 경험이 있습니다.</p>
+          </div>
+        </div>
+        <div>
+          <h2>Framework</h2>
+          <div class="skill_list">
+            <img src="images/Jqueryui.png" alt="">
+            <p>jQuery UI</p>
+            <p>jQuery UI를 다양하게 활용할 수 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/fontawesome.png" alt="">
+            <p>Font Awesome</p>
+            <p>아이콘이나 픽토그램의 경우 font awesome활용을 통해 이미지 사용을 줄이고 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/Bootstrap.png" alt="">
+            <p>bootstrap</p>
+            <p>기본적인 그리드 활용을 할 수 있습니다.</p>
+          </div>
+          <div class="skill_list">
+            <img src="images/cms.png" alt="">
+            <p>XE, 워드프레스</p>
+            <p>CMS를 사용해 본 경험이 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 
+        https://isotope.metafizzy.co/
+
+        https://stackoverflow.com/questions/25747780/jquery-tabs-show-all-div-content-in-date-filter
+        http://jsfiddle.net/4bitlabs/k5g6wcw3/
+    -->
+    <section id="section4" class="project">
+      <h1>PROJECT</h1>
+      <div class="section_wrap">
+        <div class="tab_menu">
+          <ul>
+            <li><a href="javascript:;" id="all" data-filter=".sortAll" class="sort on" title="all">ALL</a></li>
+            <li><a href="javascript:;" data-filter=".sort2019" class="sort" title="2019">2019</a></li>
+            <li><a href="javascript:;" data-filter=".sort2018" class="sort" title="2018">2018</a></li>
+            <li><a href="javascript:;" data-filter=".sort2017" class="sort" title="2017">2017</a></li>
+          </ul>
+
+          <div class="project_list">
+            <div class="project_box" data-cat=".sort2019">
+              <img src="images/web1.png" alt="">
+              <p>제 27회 KEB하나은행 자연사랑 어린이 미술대회</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2019">
+              <img src="images/web2.png" alt="">
+              <p>2019 희망공부방 대학생 선생님 모집</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web3.png" alt="">
+              <p>2018 해양쓰레기 업싸이클링 아이디어 공모전</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web4.png" alt="">
+              <p>sba 신공공서비스 정책제안 공모전</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web5.png" alt="">
+              <p>2018년 나라사랑 콘테스트</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web6.png" alt="">
+              <p>2018 서울시 좋은간판 공모전</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web7.png" alt="">
+              <p>SMART 도시시뮬레이션 경진대회</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2018">
+              <img src="images/web8.png" alt="">
+              <p>제 3회 중견기업 인식개선 공모전</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2017">
+              <img src="images/web9.jpg" alt="">
+              <p>토끼정</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2017">
+              <img src="images/web10.jpg" alt="">
+              <p>서울문화의밤</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2017">
+              <img src="images/web11.jpg" alt="">
+              <p>롯데주류</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="project_box" data-cat=".sort2017">
+              <img src="images/web12.jpg" alt="">
+              <p>LG전자</p>
+              <div class="btn_box">
+                <div>
+                  <button><i class="fas fa-search"></i></button>
+                  <button><i class="fas fa-link"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="more_box">
+            <div>
+              <button class="more"><i class="fas fa-plus"></i>MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        $(function() {
+            var posts = $('.project_box');
+
+            $( ".sort" ).click(function() { 
+                var customType = $(this).data('filter');        
+                posts.hide().filter(function () {
+                    return $(this).data('cat') === customType;
+                }).show(50);
+            });
+
+            $( "#All" ).click(function() {
+            $( ".project_box" ).show(50);
+            });
+
+            $( ".sort" ).click(function() {
+            $( this ).addClass("on").siblings().removeClass("on");
+            });
+
+
+            // more
+            $('.project_box').slice(0, 4).show();
+            $('.more').click(function(e) {
+                e.preventDefault();
+                $('.project_box:hidden').slice(0, 4).show();
+            });
+        });
+    </script>
+    <script>
+        
+
+
+    </script>
+
+    <a href="javascript:;" onclick="topScrollBtn();" class="top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    <footer>
+      <p>© 2020. Yoon Sun Mi PortFolio</p>
+      <p style="display: none;">
+        <a href="http://validator.kldp.org/check?uri=referer" onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
+        <img src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+      </p>
+      <p style="display: none;">
+        <a href="http://css-validator.kldp.org/check/referer">
+          <img style="border:0;width:80px;height:15px" src="//css-validator.kldp.org/images/validate/css-blue" alt="올바른 CSS입니다!" />
+        </a>
+      </p>
+    </footer>
+
+    
+  </div>
+</body>
+</html>
