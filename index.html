@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>portfolio</title>
+
+  <!-- css -->
   <link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+
+  <!-- script -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://kit.fontawesome.com/8703a91058.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+  <!-- page wrap start -->
   <div class="wrap">
+
+    <!-- header start -->
     <header>
       <nav class="nav_pc">
         <ul>
@@ -30,31 +40,6 @@
           </li>
         </ul>
       </nav>
-
-      
-
-      <script>
-
-          function navOffsetSection(index) {
-              var offset = $("#section" + index).offset();
-              $("html, body").animate({scrollTop : offset.top}, 1000);
-          }
-
-          function topScrollBtn() {
-            var top = $('.top').offset();
-            $("html, body").animate({scrollTop : 0}, 700);
-          }
-
-          
-          $(window).on("scroll", function(){
-              if( $(window).scrollTop() > $(".intro").height() ) {
-                  $("header").css("background", "rgba(0,0,0,.3)");
-              } else {
-                  $("header").css("background", "rgba(0,0,0,.0)");
-              }
-          });
-
-      </script>
     
       <div class="btn_mo_wrap">
         <a href="#" class="btn_mo">
@@ -80,40 +65,20 @@
           </li>
         </ul>
       </nav>
-
     </header>
+    <!-- header end -->
 
-    <script>
-      $(function() {
-        var mo_menu = $('.btn_mo');
-
-        mo_menu.each(function() {
-          var $this = $(this);
-          
-
-          $this.on('click', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('active');
-            
-            if($(this).hasClass('active')) {
-                $('.nav_mo').fadeIn().animate({'left': 0}); 
-            } else {
-                $('.nav_mo').fadeOut(); 
-            }
-           
-          });
-        });
-      });
-    </script>
-
+    <!-- section intro start -->
     <section class="intro">
       <div class="section_wrap">
         <p>부제</p>
         <h1>YOONSUNMI<br>PORTFOLIO</h1>
       </div>
     </section>
+    <!-- section intro end -->
 
-    <section id="section1" class="about_me">
+    <!-- section about me start -->
+    <section id="aboutMe" class="about_me">
       <h1>ABOUT ME</h1>
       <div class="section_wrap">
         <div class="box">
@@ -122,7 +87,7 @@
 
         <div class="box">
           <p class="name">윤선미</p>
-          <p class="job">Web Publisher & Front-End Developer</p>
+          <p class="job">Web Publisher & Developer</p>
           <ul>
             <li>AGE</li>
             <li>ADDRESS</li>
@@ -130,7 +95,7 @@
             <li>INTRODUCE</li>
           </ul>
           <ul>
-            <li>28</li>
+            <li>30</li>
             <li>서울시 중랑구</li>
             <li>yoonsm45@naver.com</li>
             <li></li>
@@ -139,7 +104,9 @@
         </div>
       </div>
     </section>
+    <!-- section about me end -->
 
+    <!-- section carrer start -->
     <section id="section2" class="career">
       <h1>CAREER</h1>
       <div class="section_wrap">
@@ -177,7 +144,9 @@
         </ul>
       </div>
     </section>
+    <!-- section carrer end -->
 
+    <!-- section skill start -->
     <section id="section3" class="skill">
       <h1>SKILL</h1>
       <div class="section_wrap">
@@ -247,14 +216,9 @@
         </div>
       </div>
     </section>
+    <!-- section skill end -->
 
-
-    <!-- 
-        https://isotope.metafizzy.co/
-
-        https://stackoverflow.com/questions/25747780/jquery-tabs-show-all-div-content-in-date-filter
-        http://jsfiddle.net/4bitlabs/k5g6wcw3/
-    -->
+    <!-- section project start -->
     <section id="section4" class="project">
       <h1>PROJECT</h1>
       <div class="section_wrap">
@@ -396,45 +360,14 @@
         </div>
       </div>
     </section>
+    <!-- section project end -->
 
-    <script>
-        $(function() {
-            var posts = $('.project_box');
-
-            $( ".sort" ).click(function() { 
-                var customType = $(this).data('filter');        
-                posts.hide().filter(function () {
-                    return $(this).data('cat') === customType;
-                }).show(50);
-            });
-
-            $( "#All" ).click(function() {
-            $( ".project_box" ).show(50);
-            });
-
-            $( ".sort" ).click(function() {
-            $( this ).addClass("on").siblings().removeClass("on");
-            });
-
-
-            // more
-            $('.project_box').slice(0, 4).show();
-            $('.more').click(function(e) {
-                e.preventDefault();
-                $('.project_box:hidden').slice(0, 4).show();
-            });
-        });
-    </script>
-    <script>
-        
-
-
-    </script>
-
+    <!-- top scroll -->
     <a href="javascript:;" onclick="topScrollBtn();" class="top"><i class="fas fa-chevron-circle-up"></i></a>
 
+    <!-- footer start -->
     <footer>
-      <p>© 2020. Yoon Sun Mi PortFolio</p>
+      <p>© 2024. Yoon Sun Mi PortFolio</p>
       <p style="display: none;">
         <a href="http://validator.kldp.org/check?uri=referer" onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
         <img src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
@@ -445,8 +378,83 @@
         </a>
       </p>
     </footer>
+    <!-- footer end -->
 
-    
   </div>
+  <!-- page wrap end -->
+
+
+<script>
+  $(document).ready(function() {
+
+    var posts = $('.project_box');
+
+    $( ".sort" ).click(function() { 
+        var customType = $(this).data('filter');        
+        posts.hide().filter(function () {
+            return $(this).data('cat') === customType;
+        }).show(50);
+    });
+
+    $("#All").click(function() {
+      $( ".project_box" ).show(50);
+    });
+
+    $(".sort").click(function() {
+      $( this ).addClass("on").siblings().removeClass("on");
+    });
+
+    // more
+    $('.project_box').slice(0, 4).show();
+    $('.more').click(function(e) {
+        e.preventDefault();
+        $('.project_box:hidden').slice(0, 4).show();
+    });
+
+
+
+    var mo_menu = $('.btn_mo');
+
+    mo_menu.each(function() {
+      var $this = $(this);
+      
+
+      $this.on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        
+        if($(this).hasClass('active')) {
+            $('.nav_mo').fadeIn().animate({'left': 0}); 
+        } else {
+            $('.nav_mo').fadeOut(); 
+        }
+        
+      });
+    });
+  });
+
+  function navOffsetSection(index) {
+      var offset = $("#section" + index).offset();
+      $("html, body").animate({scrollTop : offset.top}, 1000);
+  }
+
+  function topScrollBtn() {
+    var top = $('.top').offset();
+    $("html, body").animate({scrollTop : 0}, 700);
+  }
+
+
+  $(window).on("scroll", function(){
+      if( $(window).scrollTop() > $(".intro").height() ) {
+          $("header").css("background", "rgba(0,0,0,.3)");
+      } else {
+          $("header").css("background", "rgba(0,0,0,.0)");
+      }
+  });
+
+</script>
+
+
+
 </body>
 </html>
